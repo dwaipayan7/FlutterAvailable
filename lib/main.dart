@@ -20,9 +20,9 @@ class Myapp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: Myroutes.homeRoute,
       routes: {
-        Myroutes.homeRoute: (context) => LoginPage(),
+        Myroutes.homeRoute: (context) => const LoginPage(),
         Myroutes.homeRoute: (context) => HomePage(),
-        Myroutes.loginRoute: (context) => LoginPage()
+        Myroutes.loginRoute: (context) => const LoginPage()
       },
     );
   }
