@@ -2,11 +2,10 @@ import 'package:demo_flutter/pages/home_page.dart';
 import 'package:demo_flutter/pages/login_page.dart';
 import 'package:demo_flutter/utils/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:demo_flutter/widgets/themes.dart';
 
 void main(List<String> args) {
-  runApp(Myapp());
+  runApp(const Myapp());
 }
 
 class Myapp extends StatelessWidget {
