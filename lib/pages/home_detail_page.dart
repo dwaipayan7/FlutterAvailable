@@ -18,9 +18,9 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.transparent),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -30,7 +30,7 @@ class HomeDetailPage extends StatelessWidget {
                     onPressed: () {},
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(MyTheme.darkBluish),
+                            MaterialStateProperty.all(context.theme.buttonColor),
                         shape:
                             MaterialStateProperty.all(const StadiumBorder())),
                     child: "Buy".text.make())
@@ -52,10 +52,10 @@ class HomeDetailPage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 child: Column(
                   children: [
-                    catalog.name.text.xl4.color(MyTheme.darkBluish).bold.make(),
+                    catalog.name.text.xl4.color(context.theme.accentColor).bold.make(),
                     catalog.desc.text.textStyle(context.captionStyle).xl.make(),
                     10.heightBox,
                     "Clita sed amet et voluptua aliquyam, aliquyam ipsum eirmod ipsum invidunt justo et, rebum est eirmod sed takimata stet labore elitr. Duo sadipscing clita sea et tempor justo magna. Diam no sed sed et ipsum amet, est dolore tempor aliquyam et duo et ea sanctus dolor. Labore gubergren sed et.".text

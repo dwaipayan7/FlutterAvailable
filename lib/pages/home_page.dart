@@ -15,7 +15,7 @@ import '../widgets/home_widgets/catalog_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+ _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -47,16 +47,17 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(onPressed: () => Navigator.pushNamed(context, Myroutes.cartRoute),
       
-      backgroundColor: MyTheme.darkBluish,
-      child:const Icon(CupertinoIcons.cart),
+      backgroundColor: context.theme.buttonColor,
+      child:const Icon(CupertinoIcons.cart,
+      color: Vx.white,),
       ),
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: context.cardColor,
         body: SafeArea(
           child: Container(
               padding: Vx.m32,
               child: Column(
                 children: [
-                  CatalogHeader(),
+                  const CatalogHeader(),
                   if (CatalogModel.items != null &&
                       CatalogModel.items.isNotEmpty)
                     const CatalogList().py16().expand()
