@@ -1,3 +1,4 @@
+import 'package:demo_flutter/pages/cart_page.dart';
 import 'package:demo_flutter/pages/home_page.dart';
 import 'package:demo_flutter/pages/login_page.dart';
 import 'package:demo_flutter/utils/routes.dart';
@@ -6,7 +7,7 @@ import 'package:demo_flutter/widgets/themes.dart';
 
 void main(List<String> args) {
   runApp(const Myapp());
-}
+}    
 
 class Myapp extends StatelessWidget {
   const Myapp({super.key});
@@ -21,7 +22,8 @@ class Myapp extends StatelessWidget {
       routes: {
         Myroutes.homeRoute: (context) => const LoginPage(),
         Myroutes.homeRoute: (context) => HomePage(),
-        Myroutes.loginRoute: (context) => const LoginPage()
+        Myroutes.loginRoute: (context) => const LoginPage(),
+        Myroutes.cartRoute:(context) => const CartPage(),
       },
     );
   }
