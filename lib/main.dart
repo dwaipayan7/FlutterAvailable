@@ -7,7 +7,7 @@ import 'package:demo_flutter/widgets/themes.dart';
 
 void main(List<String> args) {
   runApp(const Myapp());
-}    
+}
 
 class Myapp extends StatelessWidget {
   const Myapp({super.key});
@@ -18,12 +18,12 @@ class Myapp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: Myroutes.loginRoute,
+      initialRoute: Myroutes.homeRoute,
       routes: {
         Myroutes.homeRoute: (context) => const LoginPage(),
         Myroutes.homeRoute: (context) => HomePage(),
         Myroutes.loginRoute: (context) => const LoginPage(),
-        Myroutes.cartRoute:(context) => const CartPage(),
+        Myroutes.cartRoute: (context) => const CartPage(),
       },
     );
   }
