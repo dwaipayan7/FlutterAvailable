@@ -1,15 +1,19 @@
 import 'dart:convert';
-
 class CatalogModel {
-  static List<Item> items = "" as List<Item>;
+  static final catModel = CatalogModel._internal();
 
-  //get item by id
+  CatalogModel._internal();
 
+  factory CatalogModel() => catModel;
+
+ static List<Item> items = "" as List<Item>;
+
+  // Get Item by ID
   Item getById(int id) =>
       items.firstWhere((element) => element.id == id, orElse: null);
 
-  // get item by position
-  List<Item> getByPosition(int pos) => items;
+  // Get Item by position
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
@@ -59,6 +63,9 @@ class Item {
   }
 
   factory Item.fromMap(Map<String, dynamic> map) {
+    // ignore: unnecessary_null_comparison
+    if (map == null) return Item.fromMap(map);
+
     return Item(
       id: map['id'],
       name: map['name'],
