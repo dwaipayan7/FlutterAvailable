@@ -1,12 +1,20 @@
+import 'package:demo_flutter/core/store.dart';
+import 'package:demo_flutter/models/cart.dart';
+import 'package:demo_flutter/models/catalog.dart';
 import 'package:demo_flutter/pages/cart_page.dart';
 import 'package:demo_flutter/pages/home_page.dart';
 import 'package:demo_flutter/pages/login_page.dart';
 import 'package:demo_flutter/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_flutter/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
-void main(List<String> args) {
-  runApp(const Myapp());
+void main() {
+  runApp(VxState(
+    store: MyStore(CatalogModel(),
+                  CartModel()),
+    child: const Myapp(),
+  ));
 }
 
 class Myapp extends StatelessWidget {
